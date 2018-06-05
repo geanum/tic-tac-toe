@@ -10,3 +10,4 @@ https://geanum.github.io/tic-tac-toe/
 - Undo button 
 - Scoring system 
 - Scalable Board
+- Mobile Friendly
