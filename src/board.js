@@ -25,7 +25,7 @@ class Board extends React.Component {
         row.push(this.renderSquare(i,j, renderSize/boardSize));
       }
 
-      const divRow = <div key={i} className="board-row"> {row} </div>
+      const divRow = <div key={i} className='board-row'> {row} </div>
       renderBoard.push(divRow);
     }
 
@@ -48,7 +48,7 @@ function Square(props) {
   }
 
   return (
-    <button style={squareStyle} className="square" onClick={props.onClick}>
+    <button style={squareStyle} className='square' onClick={props.onClick}>
       {props.value}
     </button>
   );

@@ -57,7 +57,7 @@ class Game extends React.Component {
     if (squares[x][y] || this.state.winner)
       return;
 
-    squares[x][y] = this.state.xIsNext ? "X" : "O";
+    squares[x][y] = this.state.xIsNext ? 'X' : 'O';
     moves.push({x: x, y: y});
 
     const winner = getWinner(squares, x, y);
@@ -82,15 +82,15 @@ class Game extends React.Component {
 
     let status;
     if (winner) {
-      status = "Winner: " + winner;
+      status = 'Winner: ' + winner;
     } else if (moves.length === boardSize*boardSize) {
-      status = "Draw!"
+      status = 'Draw!'
     } else {
-      status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
 
     return (
-      <div className="game">
+      <div className='game'>
         <div className='game-controls'>
           <div>
             <button onClick={() => this.resetBoard(boardSize - 1)}> - </button>
@@ -100,10 +100,10 @@ class Game extends React.Component {
           <button onClick={() => this.undo()}> Undo </button>
           <button onClick={() => this.resetBoard()}> {this.state.winner ? 'Play Again' : 'Reset'} </button>
         </div>
-        <div className="game-info">
+        <div className='game-info'>
           <div>{status}</div>
         </div>
-        <div className="game-board">
+        <div className='game-board'>
           <Board
             boardSize = {this.state.boardSize}
             squares={squares}
@@ -115,7 +115,7 @@ class Game extends React.Component {
   }
 }
 
-// Checks to see if there's a winner in linear time
+// Checks to see if there's a winner in linear time 
 function getWinner(squares, x, y) {
 
   const player = squares[x][y];
